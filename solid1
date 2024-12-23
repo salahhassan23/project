@@ -1,0 +1,22 @@
+class Student:
+    def __init__(self, name, grade):
+        self.name = name
+        self.grade = grade
+
+    def get_details(self):
+        return f"Name: {self.name}, Grade: {self.grade}"
+
+
+class StudentDatabase:
+    def save(self, student):
+        print(f"Saving student to database: {student.get_details()}")
+
+
+student = Student("Salah", "A")
+db = StudentDatabase()
+
+
+print(student.get_details())  
+
+
+db.save(student) 
